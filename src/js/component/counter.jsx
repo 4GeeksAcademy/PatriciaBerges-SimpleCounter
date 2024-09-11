@@ -6,7 +6,7 @@ const Counter = ({timer}) => {
   
   useEffect(() => {
     const counter = setInterval(() => {
-      setCount((prevCount) => (prevCount === 9 ? 0 : prevCount + 1));
+      setCount((count) => (count === 9 ? 0 : count + 1));
     }, timer);  
     return () => clearInterval(counter);
       }, [timer]);
@@ -41,4 +41,4 @@ const numberStyle = {
 }
 
 
-export {Counter, secondsStyle, numberStyle}
+export {Counter, numberStyle}
